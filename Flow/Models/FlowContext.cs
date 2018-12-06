@@ -26,5 +26,7 @@ namespace Flow.Models
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
         public System.Data.Entity.DbSet<Flow.Models.Produto> Produtoes { get; set; }
+
+        public System.Data.Entity.DbSet<Flow.Areas.Corporativo.Models.Teste> Testes { get; set; }
     }
 }
