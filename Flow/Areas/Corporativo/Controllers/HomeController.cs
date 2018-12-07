@@ -9,6 +9,7 @@ namespace Flow.Areas.Corporativo.Controllers
     public class HomeController : Controller
     {
         // GET: Corporativo/Home
+        [Authorize(Roles = "Corporativo")]
         public ActionResult Index()
         {
             return View();

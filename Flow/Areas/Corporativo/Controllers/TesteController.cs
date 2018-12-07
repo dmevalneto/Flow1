@@ -16,12 +16,14 @@ namespace Flow.Areas.Corporativo.Controllers
         private FlowContext db = new FlowContext();
 
         // GET: Corporativo/Teste
+        [Authorize(Roles = "Visualizar")]
         public ActionResult Index()
         {
             return View(db.Testes.ToList());
         }
 
         // GET: Corporativo/Teste/Details/5
+        [Authorize(Roles = "Visualizar")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace Flow.Areas.Corporativo.Controllers
         }
 
         // GET: Corporativo/Teste/Create
+        [Authorize(Roles = "Criar")]
         public ActionResult Create()
         {
             return View();
@@ -47,6 +50,7 @@ namespace Flow.Areas.Corporativo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Criar")]
         public ActionResult Create([Bind(Include = "ID,Descricao,Preco,UltimaCompra,Estoque")] Teste teste)
         {
             if (ModelState.IsValid)
@@ -60,6 +64,7 @@ namespace Flow.Areas.Corporativo.Controllers
         }
 
         // GET: Corporativo/Teste/Edit/5
+        [Authorize(Roles = "Editar")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,6 +84,7 @@ namespace Flow.Areas.Corporativo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Editar")]
         public ActionResult Edit([Bind(Include = "ID,Descricao,Preco,UltimaCompra,Estoque")] Teste teste)
         {
             if (ModelState.IsValid)
@@ -91,6 +97,7 @@ namespace Flow.Areas.Corporativo.Controllers
         }
 
         // GET: Corporativo/Teste/Delete/5
+        [Authorize(Roles = "Deletar")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -106,6 +113,7 @@ namespace Flow.Areas.Corporativo.Controllers
         }
 
         // POST: Corporativo/Teste/Delete/5
+        [Authorize(Roles = "Deletar")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
