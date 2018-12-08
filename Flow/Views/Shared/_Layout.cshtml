@@ -9,6 +9,24 @@
 
 </head>
 <body>
+
+    <nav>
+        <div>
+            <a href=""></a>
+            <button class="navbar-toggle navbar-toggler-rigth" type="button" 
+             data-toggle="collapse" data-target="#navbarResponsive">Menu</button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link1">1</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link2">2</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link3">3</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link4">4</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link5">5</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -17,14 +35,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="img-fluid navbar-brand" src="~/Content/Images/logoFlow.png" width="50px" height="50" alt="App Logo">
+                <img class="img-fluid navbar-brand" src="~/Content/Images/logoFlow.png" width="50" height="50" alt="App Logo">
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                     <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Configurações", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Configurações", "Index", "Users")</li>
                     @*<li>@Html.ActionLink("Corporativo", "Index", "Home", new { area = "Corporativo" }, null, new { @class = "bg-primary" })</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")

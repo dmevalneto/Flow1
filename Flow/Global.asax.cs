@@ -53,6 +53,10 @@ namespace Flow
             {
                 userManager.AddToRole(user.Id, "Corporativo");
             }
+            if (!userManager.IsInRole(user.Id, "Administrador"))
+            {
+                userManager.AddToRole(user.Id, "Administrador");
+            }
         }
 
         private void CriarSuperUser(ApplicationDbContext db)
@@ -94,6 +98,10 @@ namespace Flow
             if (!roleManager.RoleExists("Corporativo"))
             {
                 roleManager.Create(new IdentityRole("Corporativo"));
+            }
+            if (!roleManager.RoleExists("Administrador"))
+            {
+                roleManager.Create(new IdentityRole("Administrador"));
             }
         }
     }
