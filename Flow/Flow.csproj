@@ -247,6 +247,8 @@
     <Content Include="Content\Images\bootstrap-colorpicker\hue.png" />
     <Content Include="Content\Images\bootstrap-colorpicker\saturation.png" />
     <Content Include="Content\Images\dummy.png" />
+    <Content Include="Content\Images\fundo1.jpg" />
+    <Content Include="Content\Images\fundo2.jpg" />
     <Content Include="Content\Images\jquery-ui\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
     <Content Include="Content\Images\jquery-ui\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
     <Content Include="Content\Images\jquery-ui\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
@@ -279,9 +281,12 @@
     <Content Include="Content\Images\user\12.jpg" />
     <Content Include="Content\Images\user\13.jpg" />
     <Content Include="Content\mvc-override.css" />
+    <Content Include="css-site\modern-business.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="js-site\contact_me.js" />
+    <Content Include="js-site\jqBootstrapValidation.js" />
     <Content Include="Scripts\app.init.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Areas\Corporativo\Views\web.config" />
@@ -481,6 +486,20 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="vendor-site\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor-site\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor-site\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor-site\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor-site\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor-site\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor-site\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="vendor-site\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="vendor-site\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor-site\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor-site\jquery\jquery.js" />
+    <Content Include="vendor-site\jquery\jquery.min.js" />
+    <Content Include="vendor-site\jquery\jquery.slim.js" />
+    <Content Include="vendor-site\jquery\jquery.slim.min.js" />
     <Content Include="Vendor\%40fortawesome\fontawesome-free\css\brands.css" />
     <Content Include="Vendor\%40fortawesome\fontawesome-free\css\fontawesome.css" />
     <Content Include="Vendor\%40fortawesome\fontawesome-free\css\regular.css" />
@@ -569,6 +588,14 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="vendor-site\bootstrap\css\bootstrap.css.map" />
+    <Content Include="vendor-site\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="vendor-site\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="vendor-site\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="vendor-site\bootstrap\js\bootstrap.js.map" />
+    <Content Include="vendor-site\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="vendor-site\jquery\jquery.min.map" />
+    <Content Include="vendor-site\jquery\jquery.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
