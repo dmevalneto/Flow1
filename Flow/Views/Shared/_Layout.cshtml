@@ -6,49 +6,28 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="~/Content/Images/logoFlow.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <nav>
-        <div>
-            <a href=""></a>
-            <button class="navbar-toggle navbar-toggler-rigth" type="button" 
-             data-toggle="collapse" data-target="#navbarResponsive">Menu</button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link1">1</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link2">2</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link3">3</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link4">4</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link5">5</a></li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Sobre", "About", "Home")</li>
+                <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Configurações", "Index", "Users")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
         </div>
     </nav>
+   
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img class="img-fluid navbar-brand" src="~/Content/Images/logoFlow.png" width="50" height="50" alt="App Logo">
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Configurações", "Index", "Users")</li>
-                    @*<li>@Html.ActionLink("Corporativo", "Index", "Home", new { area = "Corporativo" }, null, new { @class = "bg-primary" })</li>*@
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -56,6 +35,7 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
