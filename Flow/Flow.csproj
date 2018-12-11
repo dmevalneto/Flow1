@@ -194,14 +194,20 @@
     <Compile Include="Areas\Corporativo\Models\Teste.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AJAXConceitoController.cs" />
+    <Compile Include="Controllers\ContaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PerfilController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
+    <Compile Include="Controllers\SetorController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Conta.cs" />
+    <Compile Include="Models\Perfil.cs" />
+    <Compile Include="Models\Setor.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\FlowContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -596,6 +602,21 @@
     <Content Include="vendor-site\bootstrap\js\bootstrap.min.js.map" />
     <Content Include="vendor-site\jquery\jquery.min.map" />
     <Content Include="vendor-site\jquery\jquery.slim.min.map" />
+    <Content Include="Views\Conta\Create.cshtml" />
+    <Content Include="Views\Conta\Delete.cshtml" />
+    <Content Include="Views\Conta\Details.cshtml" />
+    <Content Include="Views\Conta\Edit.cshtml" />
+    <Content Include="Views\Conta\Index.cshtml" />
+    <Content Include="Views\Perfil\Create.cshtml" />
+    <Content Include="Views\Perfil\Delete.cshtml" />
+    <Content Include="Views\Perfil\Details.cshtml" />
+    <Content Include="Views\Perfil\Edit.cshtml" />
+    <Content Include="Views\Perfil\Index.cshtml" />
+    <Content Include="Views\Setor\Create.cshtml" />
+    <Content Include="Views\Setor\Delete.cshtml" />
+    <Content Include="Views\Setor\Details.cshtml" />
+    <Content Include="Views\Setor\Edit.cshtml" />
+    <Content Include="Views\Setor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

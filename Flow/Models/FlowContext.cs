@@ -28,5 +28,11 @@ namespace Flow.Models
         public System.Data.Entity.DbSet<Flow.Models.Produto> Produtoes { get; set; }
 
         public System.Data.Entity.DbSet<Flow.Areas.Corporativo.Models.Teste> Testes { get; set; }
+
+        public System.Data.Entity.DbSet<Flow.Models.Conta> Contas { get; set; }
+
+        public System.Data.Entity.DbSet<Flow.Models.Perfil> Perfils { get; set; }
+
+        public System.Data.Entity.DbSet<Flow.Models.Setor> Setors { get; set; }
     }
 }
