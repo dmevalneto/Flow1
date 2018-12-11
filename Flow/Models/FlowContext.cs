@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Flow.Models
 {
@@ -23,6 +24,9 @@ namespace Flow.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
+            modelBuilder.Entity<IdentityUserRole>().HasKey(i => i.RoleId);
+
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
         public System.Data.Entity.DbSet<Flow.Models.Produto> Produtoes { get; set; }
@@ -34,5 +38,6 @@ namespace Flow.Models
         public System.Data.Entity.DbSet<Flow.Models.Perfil> Perfils { get; set; }
 
         public System.Data.Entity.DbSet<Flow.Models.Setor> Setors { get; set; }
+        
     }
 }
