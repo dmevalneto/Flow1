@@ -15,14 +15,14 @@ namespace Flow.Controllers
         private FlowContext db = new FlowContext();
 
         // GET: Produto
-        [Authorize(Roles = "Visualizar")]
+       // [Authorize(Roles = "Visualizar")]
         public ActionResult Index()
         {
             return View(db.Produtoes.ToList());
         }
 
         // GET: Produto/Details/5
-        [Authorize(Roles = "Visualizar")]
+       // [Authorize(Roles = "Visualizar")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,7 +38,7 @@ namespace Flow.Controllers
         }
 
         // GET: Produto/Create
-        [Authorize(Roles = "Criar")]
+       // [Authorize(Roles = "Criar")]
         public ActionResult Create()
         {
             return View();
@@ -49,7 +49,7 @@ namespace Flow.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Criar")]
+       // [Authorize(Roles = "Criar")]
         public ActionResult Create([Bind(Include = "ID,Descricao,Preco,UltimaCompra,Estoque")] Produto produto)
         {
             if (ModelState.IsValid)
@@ -63,7 +63,7 @@ namespace Flow.Controllers
         }
 
         // GET: Produto/Edit/5
-        [Authorize(Roles = "Editar")]
+       // [Authorize(Roles = "Editar")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -83,7 +83,7 @@ namespace Flow.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Editar")]
+       // [Authorize(Roles = "Editar")]
         public ActionResult Edit([Bind(Include = "ID,Descricao,Preco,UltimaCompra,Estoque")] Produto produto)
         {
             if (ModelState.IsValid)
@@ -96,7 +96,7 @@ namespace Flow.Controllers
         }
 
         // GET: Produto/Delete/5
-        [Authorize(Roles = "Deletar")]
+       // [Authorize(Roles = "Deletar")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,7 +112,7 @@ namespace Flow.Controllers
         }
 
         // POST: Produto/Delete/5
-        [Authorize(Roles = "Deletar")]
+       // [Authorize(Roles = "Deletar")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

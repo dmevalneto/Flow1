@@ -17,8 +17,8 @@ namespace Flow
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.FlowContext, Migrations.Configuration>());
             ApplicationDbContext db = new ApplicationDbContext();
             CriarRoles(db);
-            CriarSuperUser(db);
-            AddPermissoesSuperUser(db);
+            //CriarSuperUser(db);
+            //AddPermissoesSuperUser(db);
             db.Dispose();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
