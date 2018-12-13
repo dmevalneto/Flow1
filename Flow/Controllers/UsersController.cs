@@ -14,7 +14,7 @@ namespace Flow.Controllers
     [Authorize(Roles ="Administrador")]
     public class UsersController : Controller
     {
-        ApplicationDbContext db = new ApplicationDbContext();
+        FlowContext db = new FlowContext();
         // GET: Users
         public ActionResult Index()
         {

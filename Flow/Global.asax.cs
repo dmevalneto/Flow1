@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
+
 namespace Flow
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -15,7 +16,7 @@ namespace Flow
         protected void Application_Start()
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.FlowContext, Migrations.Configuration>());
-            ApplicationDbContext db = new ApplicationDbContext();
+            FlowContext db = new FlowContext();
             CriarRoles(db);
             //CriarSuperUser(db);
             //AddPermissoesSuperUser(db);
@@ -27,7 +28,7 @@ namespace Flow
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        private void AddPermissoesSuperUser(ApplicationDbContext db)
+        private void AddPermissoesSuperUser(FlowContext db)
         {
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             var user = userManager.FindByName("superusuario@flow.com");
@@ -59,7 +60,7 @@ namespace Flow
             }
         }
 
-        private void CriarSuperUser(ApplicationDbContext db)
+        private void CriarSuperUser(FlowContext db)
         {
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             var user = userManager.FindByName("superusuario@flow.com");
@@ -75,7 +76,7 @@ namespace Flow
             }
         }
 
-        private void CriarRoles(ApplicationDbContext db)
+        private void CriarRoles(FlowContext db)
         {
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
 

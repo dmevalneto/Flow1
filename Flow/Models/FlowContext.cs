@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Flow.Models
 {
-    public class FlowContext : DbContext
+    public class FlowContext : IdentityDbContext<ApplicationUser>
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -21,6 +21,10 @@ namespace Flow.Models
         {
         }
 
+        public static FlowContext Create()
+        {
+            return new FlowContext();
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
